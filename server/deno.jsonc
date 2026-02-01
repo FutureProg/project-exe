@@ -7,14 +7,22 @@
         "api.anthropic.com"
       ],
       "read":{ 
-        "allow": ["."],
-        "deny": [".env"]
+        "allow": [
+          ".", 
+          "/home/nick/.cache/deno/npm/registry.npmjs.org/@anthropic-ai/claude-agent-sdk/",
+          "/home/nick/.claude/debug"          
+        ]
       },
+      "write": [
+        "/home/nick/.claude/debug"
+      ],
+      "run": [ "node" ],
+      "sys": ["homedir"],
       "env": true
     }    
   },
   "tasks": {
-    "dev": "deno run --watch --allow-env --deny-read=.env --allow-read --allow-net=0.0.0.0:8000,api.anthropic.com main.ts"
+    "dev": "deno run -P main.ts"
   },
   "imports": {
     "@anthropic-ai/claude-agent-sdk": "npm:@anthropic-ai/claude-agent-sdk@^0.2.29",
