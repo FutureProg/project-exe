@@ -1,12 +1,15 @@
 {
   "name": "project-exe-app",
   "version": "1.0.0",
-  "main": "expo-router/entry",
+  "main": "index.js",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "storybook": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start",
+    "storybook:web": "EXPO_PUBLIC_STORYBOOK_ENABLED=true expo start --web",
+    "storybook:generate": "sb-rn-get-stories"
   },
   "dependencies": {
     "expo": "~55.0.4",
@@ -19,7 +22,20 @@
     "react-native": "0.83.2",
     "react-native-safe-area-context": "~5.6.2",
     "react-native-screens": "~4.23.0",
-    "react-native-web": "^0.21.0"
+    "react-native-web": "^0.21.0",
+    "@babel/core": "^7.29.0",
+    "babel-loader": "^8.4.1",
+    "@react-native-async-storage/async-storage": "^3.0.1",
+    "@react-native-community/datetimepicker": "^8.6.0",
+    "@react-native-community/slider": "^5.1.2",
+    "react-native-reanimated": "^4.2.2",
+    "react-native-gesture-handler": "^2.30.0",
+    "@gorhom/bottom-sheet": "^5.2.8",
+    "react-native-svg": "^15.15.3",
+    "@storybook/addon-ondevice-controls": "^10.2.3",
+    "@storybook/addon-ondevice-actions": "^10.2.3",
+    "@storybook/react-native": "^10.2.3",
+    "storybook": "^10.2.13"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
