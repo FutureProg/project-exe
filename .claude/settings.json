@@ -1,0 +1,6 @@
+{
+  "enabledPlugins": {
+    "expo-app-design@expo-plugins": true,
+    "upgrading-expo@expo-plugins": true
+  }
+}
