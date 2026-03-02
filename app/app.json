@@ -30,7 +30,7 @@
       "bundler": "metro",
       "output": "single"
     },
-    "plugins": ["expo-router"],
+    "plugins": ["expo-router", "./plugins/withAsyncStorageRepo"],
     "experiments": {
       "typedRoutes": true
     }
