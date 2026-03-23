@@ -1,0 +1,104 @@
+/**
+ * Design tokens — import this file once at the app entry point.
+ * All .module.css files should reference these variables rather than hardcoding values.
+ */
+
+:root {
+  /* ─── Colors ─────────────────────────────────────────────────────────────── */
+  /* All colors use oklch(lightness chroma hue) */
+
+  --color-primary:         oklch(0.55 0.20 250);
+  --color-primary-hover:   color-mix(in oklch, var(--color-primary) 85%, black);
+  --color-primary-subtle:  color-mix(in oklch, var(--color-primary) 15%, transparent);
+
+  --color-surface:         oklch(0.99 0.00 0);
+  --color-surface-raised:  oklch(0.97 0.00 0);
+  --color-surface-overlay: oklch(0.94 0.00 0);
+
+  --color-text:            oklch(0.13 0.00 0);
+  --color-text-secondary:  oklch(0.45 0.00 0);
+  --color-text-disabled:   oklch(0.70 0.00 0);
+  --color-text-on-primary: oklch(1.00 0.00 0);
+
+  --color-border:          oklch(0.88 0.00 0);
+  --color-border-focus:    var(--color-primary);
+
+  --color-error:           oklch(0.55 0.22 25);
+  --color-success:         oklch(0.55 0.18 145);
+  --color-warning:         oklch(0.75 0.18 75);
+
+  /* ─── Spacing ─────────────────────────────────────────────────────────────── */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+
+  /* ─── Typography ──────────────────────────────────────────────────────────── */
+  --font-size-xs:   clamp(0.75rem,  0.72rem + 0.15vw, 0.813rem);
+  --font-size-sm:   clamp(0.875rem, 0.84rem + 0.18vw, 0.938rem);
+  --font-size-base: clamp(1rem,     0.96rem + 0.20vw, 1.063rem);
+  --font-size-lg:   clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+  --font-size-xl:   clamp(1.25rem,  1.18rem + 0.35vw, 1.5rem);
+  --font-size-2xl:  clamp(1.5rem,   1.38rem + 0.60vw, 1.875rem);
+  --font-size-3xl:  clamp(1.875rem, 1.65rem + 1.13vw, 2.5rem);
+
+  --font-weight-normal:   400;
+  --font-weight-medium:   500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:     700;
+
+  --line-height-tight:  1.25;
+  --line-height-normal: 1.5;
+  --line-height-loose:  1.75;
+
+  /* ─── Border radius ────────────────────────────────────────────────────────── */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-full: 9999px;
+
+  /* ─── Shadows ──────────────────────────────────────────────────────────────── */
+  --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.08);
+  --shadow-md: 0 4px 8px oklch(0 0 0 / 0.10), 0 1px 2px oklch(0 0 0 / 0.06);
+  --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.12), 0 2px 4px oklch(0 0 0 / 0.06);
+
+  /* ─── Motion ───────────────────────────────────────────────────────────────── */
+  --duration-fast:   100ms;
+  --duration-normal: 200ms;
+  --duration-slow:   350ms;
+  --ease-out: cubic-bezier(0.0, 0.0, 0.2, 1);
+  --ease-in-out: cubic-bezier(0.4, 0.0, 0.2, 1);
+
+  /* ─── Z-index ──────────────────────────────────────────────────────────────── */
+  --z-base:    0;
+  --z-raised:  10;
+  --z-overlay: 100;
+  --z-modal:   200;
+  --z-toast:   300;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primary:         oklch(0.65 0.18 250);
+    --color-primary-hover:   color-mix(in oklch, var(--color-primary) 85%, white);
+
+    --color-surface:         oklch(0.10 0.00 0);
+    --color-surface-raised:  oklch(0.14 0.00 0);
+    --color-surface-overlay: oklch(0.18 0.00 0);
+
+    --color-text:            oklch(0.95 0.00 0);
+    --color-text-secondary:  oklch(0.65 0.00 0);
+    --color-text-disabled:   oklch(0.42 0.00 0);
+
+    --color-border:          oklch(0.25 0.00 0);
+
+    --shadow-sm: 0 1px 2px oklch(0 0 0 / 0.30);
+    --shadow-md: 0 4px 8px oklch(0 0 0 / 0.40), 0 1px 2px oklch(0 0 0 / 0.25);
+    --shadow-lg: 0 8px 24px oklch(0 0 0 / 0.50), 0 2px 4px oklch(0 0 0 / 0.25);
+  }
+}
