@@ -1,0 +1,8 @@
+.message-box {
+    position: relative;
+    display: block;
+    width: 400px;
+    height: 160px;
+    background: oklch(98% 0 0);
+    font-size: 32px;    
+}

@@ -5,60 +5,62 @@
  */
 
 export const colors = {
-  // --color-primary: oklch(0.55 0.20 250)
-  primary: "#1a6cf0",
-  // --color-primary-hover: color-mix(in oklch, primary 85%, black)
-  primaryHover: "#155ac8",
-  // --color-primary-subtle: color-mix(in oklch, primary 15%, transparent)
+  // --color-primary
+  primary: "oklch(0.55 0.20 250)",
+  // --color-primary-hover: color-mix(in oklch, primary 85%, black) → oklch(0.47 0.17 250)
+  primaryHover: "oklch(0.47 0.17 250)",
+  // --color-primary-subtle: color-mix(in oklch, primary 15%, transparent) → primary @ 15% opacity
   primarySubtle: "rgba(26, 108, 240, 0.15)",
 
-  // --color-surface: oklch(0.99 0.00 0)
-  surface: "#fcfcfc",
-  // --color-surface-raised: oklch(0.97 0.00 0)
-  surfaceRaised: "#f7f7f7",
-  // --color-surface-overlay: oklch(0.94 0.00 0)
-  surfaceOverlay: "#f0f0f0",
+  // --color-surface
+  surface: "oklch(0.99 0.00 0)",
+  // --color-surface-raised
+  surfaceRaised: "oklch(0.97 0.00 0)",
+  // --color-surface-overlay
+  surfaceOverlay: "oklch(0.94 0.00 0)",
 
-  // --color-text: oklch(0.13 0.00 0)
-  text: "#1e1e1e",
-  // --color-text-secondary: oklch(0.45 0.00 0)
-  textSecondary: "#6b6b6b",
-  // --color-text-disabled: oklch(0.70 0.00 0)
-  textDisabled: "#aaaaaa",
-  // --color-text-on-primary: oklch(1.00 0.00 0)
-  textOnPrimary: "#ffffff",
+  // --color-text
+  text: "oklch(0.13 0.00 0)",
+  // --color-text-secondary
+  textSecondary: "oklch(0.45 0.00 0)",
+  // --color-text-disabled
+  textDisabled: "oklch(0.70 0.00 0)",
+  // --color-text-on-primary
+  textOnPrimary: "oklch(1.00 0.00 0)",
 
-  // --color-border: oklch(0.88 0.00 0)
-  border: "#dedede",
+  // --color-border
+  border: "oklch(0.88 0.00 0)",
 
-  // --color-error: oklch(0.55 0.22 25)
-  error: "#e03e2b",
-  // --color-success: oklch(0.55 0.18 145)
-  success: "#27924e",
-  // --color-warning: oklch(0.75 0.18 75)
-  warning: "#c98a00",
+  // --color-error
+  error: "oklch(0.55 0.22 25)",
+  // --color-success
+  success: "oklch(0.55 0.18 145)",
+  // --color-warning
+  warning: "oklch(0.75 0.18 75)",
 } as const;
 
 export const colorsDark = {
-  // --color-primary: oklch(0.65 0.18 250) [dark]
-  primary: "#4d8ff5",
-  primaryHover: "#6ba3f7",
+  // --color-primary [dark]
+  primary: "oklch(0.65 0.18 250)",
+  // --color-primary-hover: color-mix(in oklch, primary 85%, white) → oklch(0.70 0.15 250)
+  primaryHover: "oklch(0.70 0.15 250)",
+  // --color-primary-subtle: primary @ 15% opacity
   primarySubtle: "rgba(77, 143, 245, 0.15)",
 
-  surface: "#191919",
-  surfaceRaised: "#222222",
-  surfaceOverlay: "#2b2b2b",
+  surface: "oklch(0.10 0.00 0)",
+  surfaceRaised: "oklch(0.14 0.00 0)",
+  surfaceOverlay: "oklch(0.18 0.00 0)",
 
-  text: "#f2f2f2",
-  textSecondary: "#a0a0a0",
-  textDisabled: "#5c5c5c",
-  textOnPrimary: "#ffffff",
+  text: "oklch(0.95 0.00 0)",
+  textSecondary: "oklch(0.65 0.00 0)",
+  textDisabled: "oklch(0.42 0.00 0)",
+  textOnPrimary: "oklch(1.00 0.00 0)",
 
-  border: "#3a3a3a",
+  border: "oklch(0.25 0.00 0)",
 
-  error: "#f07060",
-  success: "#4caf7d",
-  warning: "#f0b840",
+  error: "oklch(0.70 0.18 25)",
+  success: "oklch(0.70 0.15 145)",
+  warning: "oklch(0.82 0.15 75)",
 } as const;
 
 export const space = {
@@ -95,4 +97,18 @@ export const radius = {
   lg:   12,
   xl:   16,
   full: 9999,
+} as const;
+
+// --duration-*
+export const duration = {
+  fast:   100,  // --duration-fast
+  normal: 200,  // --duration-normal
+  slow:   350,  // --duration-slow
+} as const;
+
+// Reanimated-compatible Bezier easing values matching --ease-* tokens.
+// Usage: withTiming(val, { duration: duration.normal, easing: Easing.bezier(...easing.out) })
+export const easing = {
+  out:   [0.0, 0.0, 0.2, 1] as [number, number, number, number], // --ease-out
+  inOut: [0.4, 0.0, 0.2, 1] as [number, number, number, number], // --ease-in-out
 } as const;
