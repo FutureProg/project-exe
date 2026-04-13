@@ -72,6 +72,13 @@ export const space = {
   8:  32,
   12: 48,
   16: 64,
+  xs:   13,
+  sm:   14,
+  base: 16,
+  lg:   18,
+  xl:   20,
+  "2xl": 24,
+  "3xl": 30,
 } as const;
 
 export const fontSize = {

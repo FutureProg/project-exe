@@ -37,6 +37,15 @@
   --space-12: 3rem;      /* 48px */
   --space-16: 4rem;      /* 64px */
 
+  --space-xs:  0.25rem;   /*  4px */
+  --space-sm:  0.5rem;    /*  8px */
+  --space-base: 0.75rem;   /* 12px */
+  --space-lg:  1rem;      /* 16px */
+  --space-xl:  1.5rem;    /* 24px */
+  --space-2xl:  2rem;      /* 32px */
+  --space-3xl: 3rem;      /* 48px */
+  --space-4xl: 4rem;      /* 64px */
+
   /* ─── Typography ──────────────────────────────────────────────────────────── */
   --font-size-xs:   clamp(0.75rem,  0.72rem + 0.15vw, 0.813rem);
   --font-size-sm:   clamp(0.875rem, 0.84rem + 0.18vw, 0.938rem);
