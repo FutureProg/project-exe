@@ -28,4 +28,5 @@ pids
 *.pid
 *.seed
 *.pid.lock
+**/storybook.requires.ts
 app/.rnstorybook/storybook.requires.ts
