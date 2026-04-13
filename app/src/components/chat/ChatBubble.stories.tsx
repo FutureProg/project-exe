@@ -22,6 +22,6 @@ export type Story = StoryObj<typeof meta>;
 export const UserMessage: Story = {
   args: {
     message: "Hello, how are you?",
-    isUser: true,
+    isUser: true
   },
 };
