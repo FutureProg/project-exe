@@ -3,14 +3,19 @@ import { StyleSheet, Text, View } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        alignItems: 'flex-start'        
+        display: 'flex',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        width: '100%',
+        backgroundColor: 'black'        
     },
     bubble: {
+        width: '100%',
         backgroundColor: colors.surface,
-        borderRadius: radius.md,
+        borderRadius: radius.lg,
+        cornerShape: 'rounded',
         padding: space[6],
-        maxWidth: '80%',
+        maxWidth: 640,
     },
     text: {
         color: colors.text,

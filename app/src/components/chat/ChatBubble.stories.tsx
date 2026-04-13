@@ -8,7 +8,7 @@ const meta = {
   component: ChatBubble,
   decorators: [
     (Story) => (
-      <View style={{ flex: 1, alignItems: "flex-start", padding: 16 }}>
+      <View style={{ flex: 1, alignItems: "flex-start", padding: 16}}>
         <Story />
       </View>
     ),
