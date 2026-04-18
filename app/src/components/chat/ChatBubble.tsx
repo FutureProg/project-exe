@@ -21,22 +21,35 @@ const styles = StyleSheet.create({
     text: {
         color: colors.text,
         fontSize: fontSize.base,
-    }    
+    }
 });
 
+/**
+ * ChatBubble component to display a chat message with typing animation.
+ * @param message The message to display in the chat bubble.
+ * @param isUser Optional boolean to indicate if the message is from the user (not used in current implementation).
+ * @param animationSpeed Optional number representing the speed of the typing animation in milliseconds. If negative or 0, the full message will be displayed immediately.
+ */
 export type ChatBubbleProps = {
     message: string;
     isUser?: boolean;
-    generationTime?: number;
     animationSpeed?: number;
 };
 
+/** 
+ * /docs 
+ * ChatBubble component to display a chat message with typing animation. 
+ * The message will be revealed one character at a time based on the specified animation speed. 
+ * If the animation speed is negative or 0, the full message will be displayed immediately without animation.
+ * @see ChatBubbleProps
+ * @returns A React component that renders the chat bubble with the message and typing animation.
+*/
 export const ChatBubble = ({ message, isUser, animationSpeed = 10 }: ChatBubbleProps) => {
-    const [typingProgress, setTypingProgress] = useState(animationSpeed >= 0 ? 0 : message.length);
+    const [typingProgress, setTypingProgress] = useState(animationSpeed > 0 ? 0 : message.length);
     const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
     useOnMount(() => {
-        if (animationSpeed < 0) return;
+        if (animationSpeed <= 0) return;
         setTypingProgress(0);
         intervalRef.current = setInterval(() => {
             setTypingProgress(prev => {
