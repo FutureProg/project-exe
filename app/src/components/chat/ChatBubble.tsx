@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'center',
         width: '100%',
-        backgroundColor: 'black'        
     },
     bubble: {
         width: '100%',
