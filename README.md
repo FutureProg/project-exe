@@ -1,4 +1,4 @@
-# Project EXE
+# WIP - Project EXE
 
 A NetNavi-inspired AI companion system focused on **proactive self-agency** and genuine companionship rather than reactive task completion.
 
